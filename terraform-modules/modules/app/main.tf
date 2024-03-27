@@ -5,18 +5,18 @@
 
  }
 
-// resource "null_resource" "test" {
-//   provisioner "remote-exec" {
-//    connection {
-//      type     = "ssh"
-//      user     = var.sshUser
-//      password = var.sshPass
-//      host     = aws_instance.frontend.public_ip
-//    }
-//    inline = [
-//      "sudo dnf install nginx",
-//      "sudo systemctl start nginx"
-//    ]
-//  }
-//
-// }
+ resource "null_resource" "test" {
+   provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = var.sshUser
+      password = var.sshPass
+      host     = aws_instance.frontend.public_ip
+    }
+    inline = [
+      "sudo dnf install nginx",
+      "sudo systemctl start nginx"
+    ]
+  }
+
+ }
