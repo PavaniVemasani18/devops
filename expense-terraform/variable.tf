@@ -1,2 +1,7 @@
-variable "message"{}
+variable "message"{
+//  default = "hello"
+}
+
+variable "print"{}
+//step1
 
