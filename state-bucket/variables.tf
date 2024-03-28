@@ -1,5 +1,6 @@
-variable "message" {}
-
-output "demo" {
-  value = var.message
-}
+ variable "message" {
+   default = "hello"
+ }
+ output "demo" {
+   value = var.message
+ }
