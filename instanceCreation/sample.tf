@@ -3,7 +3,7 @@ resource "aws_instance" "test" {
   instance_type = var.instancetype
   vpc_security_group_ids = [data.aws_security_group.security.id]
   tags = {
-    name = var.instanceName
+    Name = var.instanceName
   }
 }
 variable "ami" {}
