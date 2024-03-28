@@ -1,5 +1,5 @@
-variable "env" {}
+variable "message" {}
 
-output "env" {
-  value = var.env
+output "messg" {
+  value = var.message
 }
