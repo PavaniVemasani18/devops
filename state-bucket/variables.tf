@@ -1,5 +1,5 @@
 variable "message" {}
 
-output "messg" {
+output "demo" {
   value = var.message
 }
