@@ -26,3 +26,8 @@
       ansible.builtin.get_url:
         url: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
         dest: /tmp/frontend.zip
+
+    - name: Extract frontend zip file
+      ansible.builtin.unarchive:
+       src: /tmp/frontend.zip
+       dest: /usr/share/nginx/html
