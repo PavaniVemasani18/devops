@@ -8,4 +8,4 @@ if [ -z $action ]; then
 fi
 rm -rf .terraform/terraform.tfstate
 terraform $action -backend-config=env-$env/state-$env.tfvars
-terraform $action  -auto-approve
+terraform apply  -auto-approve
