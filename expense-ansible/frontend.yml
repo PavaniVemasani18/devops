@@ -35,5 +35,5 @@
 
     - name: Copy expense conf file
       ansible.builtin.copy:
-        src: /expense-ansible/expense.conf
+        src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
