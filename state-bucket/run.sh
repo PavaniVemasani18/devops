@@ -1,4 +1,4 @@
-env=$1
+env=var.env
 action=$2
 if [ -z $env ]; then
   echo "env [dev/prod] is missing"

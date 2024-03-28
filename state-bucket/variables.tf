@@ -4,3 +4,5 @@
  output "demo" {
    value = var.message
  }
+
+ variable "env"{}
