@@ -11,3 +11,18 @@
       ansible.builtin.systemd_service:
         name: "nginx"
         state: started
+
+    - name: "clean the code"
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: absent
+
+    - name: Create a directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+
+    - name: Download frontend url
+       ansible.builtin.get_url:
+         url: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
+         dest: /tmp/frontend.zip
