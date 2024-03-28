@@ -1,0 +1,7 @@
+- name: "Install nginx"
+  hosts: all
+  tasks:
+    - name: "statrt nginx installation"
+      ansible.builtin.dnf:
+        name: "nginx"
+        state: latest
