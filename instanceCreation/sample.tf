@@ -2,9 +2,9 @@ resource "aws_instance" "test" {
   ami = var.ami
   instance_type = var.instancetype
   vpc_security_group_ids = [data.aws_security_group.security.id]
-//  tags = {
-//    Name = var.instanceName
-//  }
+  tags = {
+    Name = var.instanceName
+  }
 }
 variable "ami" {}
 variable "instancetype"{}
