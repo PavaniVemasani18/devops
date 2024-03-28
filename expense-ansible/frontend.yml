@@ -29,5 +29,6 @@
 
     - name: Extract frontend zip file
       ansible.builtin.unarchive:
-       src: /tmp/frontend.zip
-       dest: /usr/share/nginx/html
+        src: /tmp/frontend.zip
+        dest: /usr/share/nginx/html
+        remote_src: yes
