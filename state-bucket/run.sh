@@ -1,5 +1,5 @@
-env=var.env
-action=$1
+env=$1
+action=$2
 if [ -z $env ]; then
   echo "env [dev/prod] is missing"
 fi
@@ -8,4 +8,4 @@ if [ -z $action ]; then
 fi
 rm -rf .terraform/terraform.tfstate
 terraform init -backend-config=env-$env/state-$env.tfvars
-terraform $action  -auto-approve
+terraform action  -auto-approve
