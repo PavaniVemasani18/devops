@@ -37,3 +37,8 @@
       ansible.builtin.copy:
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
+
+    - name: Restart configuration service
+      ansible.builtin.service:
+        name: "nginx"
+        state: restarted
