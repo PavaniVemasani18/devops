@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
     bucket = "bknd-state-file"
-    key    = "test1/file"
+    key    = "test1/${var.env}/file"
     region = "us-east-1"
   }
 }
-//resource "null_resource" "test" {}
+resource "null_resource" "test" {}
