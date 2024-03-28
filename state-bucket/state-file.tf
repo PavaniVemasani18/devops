@@ -1,6 +1,4 @@
 terraform {
-  backend "s3" {
-
-  }
+  backend "s3" {}
 }
 resource "null_resource" "test" {}
