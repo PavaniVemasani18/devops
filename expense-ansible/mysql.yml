@@ -6,3 +6,9 @@
       ansible.builtin.dnf:
         name: "mysql-server"
         state: latest
+
+    - name: "Start mysql server service"
+      ansible.builtin.systemd_service:
+        name: "mysqld"
+        state: started
+
