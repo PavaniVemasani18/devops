@@ -12,10 +12,10 @@
         name: "mysqld"
         state: started
 
-    -  name: "Enable mysql server service"
-       ansible.builtin.systemd_service:
-         name: "mysqld"
-         enabled: true
+    - name: "Enable mysql server service"
+      ansible.builtin.systemd_service:
+        name: "mysqld"
+        enabled: true
 
     - name: "mysql_secure_installation"
       mysql_secure_installation:
