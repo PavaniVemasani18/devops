@@ -2,10 +2,8 @@
   hosts: all
   become: yes
   tasks:
-    - name: disable nodejs
-      ansible.builtin.package:
-        name: nodejs
-        state: absent
+     - name: enable nodejs
+       ansible.builtin.shell: dnf module enable nodejs -y
 
     - name: enable nodejs
       ansible.builtin.shell: dnf module enable nodejs:20 -y
@@ -71,12 +69,13 @@
 
     - name: Load Schema
       mysql_db:
-        name: mysql
+        name: all
+        state: import
+        target: /app/schema/backend.sql
         login_user: root
         login_password: ExpenseApp@1
         login_host: mysql-dev.pdevops72.online
-        state: import
-        target: /app/schema/backend.sql
+
 
     - name: Enabled backend service
       ansible.builtin.service:
