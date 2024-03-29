@@ -17,4 +17,8 @@
         name: "mysqld"
         enabled: true
 
+    - name: "hello"
+      ansible.builtin.debug:
+        msg: "hai"
+
 
