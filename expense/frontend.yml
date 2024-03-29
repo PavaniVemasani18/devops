@@ -12,10 +12,7 @@
         name: nginx
         state: started
 
-    - name: Copy expense conf file
-      ansible.builtin.copy:
-        src: frontend.conf
-        dest: /etc/nginx/default.d/expense.conf
+
 
     - name: clean the code
       ansible.builtin.file:
