@@ -1,7 +1,7 @@
 - name: "backend"
   hosts: backend-dev.pdevops72.online
   tasks:
-    -name: "disable nodejs package"
+    - name: "disable nodejs package"
      ansible.builtin.dnf:
        state: disabled
 
