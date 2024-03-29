@@ -1,4 +1,4 @@
-- name: "Install mysql server"
+- name: "mysql"
   hosts: mysql-dev.pdevops72.online
   become: yes
   tasks:
