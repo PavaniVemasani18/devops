@@ -19,59 +19,59 @@
       ansible.builtin.user:
         name: expense
 
-    - name: "clean the code"
+    - name: clean the code
       ansible.builtin.file:
         path: /app
         state: absent
 
-    - name: "Make a directory"
+    - name: Make a directory
       ansible.builtin.file:
         path: /app
         state: directory
 
-    - name: "Download backend zip"
+    - name: Download backend zip
       ansible.builtin.get_url:
         url: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
         dest: /tmp/backend.zip
 
-    - name: "unarchive backend zip"
+    - name: unarchive backend zip
       ansible.builtin.unarchive:
         src: /tmp/backend.zip
         dest: /app
         remote_src: yes
 
-    - name: "Install npm dependencies"
+    - name: Install npm dependencies
       community.general.npm:
-        name: "npm"
+        name: npm
         path: npm install
         state: latest
 
-    - name: "Copy backend service"
+    - name: Copy backend service
       ansible.builtin.copy:
         src: backend.conf
         dest: /etc/systemd/system/backend.service
 
-    - name: "Load the service"
+    - name: Load the service
       ansible.builtin.systemd_service:
         daemon_reload: true
 
-    - name: "Install mysql"
+    - name: Install mysql
       ansible.builtin.dnf:
-         name: "mysql"
+         name: mysql
          state: latest
 
-    - name: "Install PyMySQL package"
+    - name: Install PyMySQL package
       ansible.builtin.pip:
-        name: "PyMySQL"
+        name: PyMySQL
         state: latest
-    - name: "Install cryptography package"
+    - name: Install cryptography package
       ansible.builtin.pip:
-        name: "cryptography"
+        name: cryptography
         state: latest
 
-    - name: "Load Schema"
+    - name: Load Schema
       mysql_db:
-        name: "mysql"
+        name: mysql
         login_user: root
         login_password: ExpenseApp@1
         login_host: mysql-dev.pdevops72.online
@@ -80,13 +80,13 @@
 
     - name: Enabled backend service
       ansible.builtin.service:
-        name: "backend"
+        name: backend
         enabled: yes
 
 
     - name: Restart configuration service
       ansible.builtin.service:
-        name: "backend"
+        name: backend
         state: restarted
 
 
