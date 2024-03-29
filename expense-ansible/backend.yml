@@ -54,10 +54,12 @@
 
     - name: "Enable service"
       ansible.builtin.service:
+        name: "nodejs"
         enabled: yes
 
     - name: "Enable service"
       ansible.builtin.service:
+        name: "nodejs"
         state: started
 
 
