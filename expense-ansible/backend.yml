@@ -2,8 +2,8 @@
   hosts: all
   become: yes
   tasks:
-     - name: enable nodejs
-       ansible.builtin.shell: dnf module enable nodejs -y
+    - name: enable nodejs
+      ansible.builtin.shell: dnf module enable nodejs -y
 
     - name: enable nodejs
       ansible.builtin.shell: dnf module enable nodejs:20 -y
