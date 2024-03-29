@@ -1,23 +1,21 @@
-- name: "backend"
-  hosts: backend-dev.pdevops72.online
+- name: backend
+  hosts: all
   become: yes
   tasks:
-    - name: "disable nodejs"
+    - name: disable nodejs
       ansible.builtin.package:
-        name: "nodejs"
+        name: nodejs
         state: absent
 
-    - name: "enable nodejs"
-      ansible.builtin.package:
-        name: "nodejs"
-        state: present
+    - name: enable nodejs
+      ansible.builtin.package: dnf module enable nodejs:20 -y
 
-    - name: "Install nodejs"
+    - name: Install nodejs
       ansible.builtin.dnf:
-        name: "nodejs"
+        name: nodejs
         state: installed
 
-    - name: "Add application user"
+    - name: Add application user
       ansible.builtin.user:
         name: expense
 
