@@ -61,7 +61,7 @@
       ansible.builtin.pip:
         name: "PyMySQL"
         state: latest
-    - name: "Install PyMySQL package"
+    - name: "Install cryptography package"
       ansible.builtin.pip:
         name: "cryptography"
         state: latest
