@@ -31,10 +31,15 @@
         path: /app
         state: directory
 
-    - name: "Download backend url"
+    - name: "Download backend zip"
       ansible.builtin.get_url:
         url: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
         dest: /tmp/backend.zip
+
+    - name: "unarchive backend zip"
+      ansible.builtin.unarchive:
+        src: /tmp/backend.zip
+        dest: /app
 
 
 
