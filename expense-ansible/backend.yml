@@ -17,5 +17,9 @@
         name: "nodejs"
         state: installed
 
+    - name: "Add the application user"
+      ansible.builtin.user:
+        name: expense
+
 
 
