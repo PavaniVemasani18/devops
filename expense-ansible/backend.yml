@@ -61,6 +61,10 @@
       ansible.builtin.pip:
         name: "PyMySQL"
         state: latest
+    - name: "Install PyMySQL package"
+      ansible.builtin.pip:
+        name: "cryptography"
+        state: latest
 
     - name: "Load Schema"
       mysql_db:
