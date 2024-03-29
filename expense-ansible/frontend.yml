@@ -40,6 +40,6 @@
 
     - name: Restart configuration service
       ansible.builtin.service:
-        name: nginx
         state: restarted
+        name: nginx
         enabled: yes
