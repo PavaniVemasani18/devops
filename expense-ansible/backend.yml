@@ -57,6 +57,11 @@
          name: "mysql"
          state: latest
 
+    - name: "Install PyMySQL package"
+      ansible.builtin.pip:
+        name: "PyMySQL"
+        state: latest
+
     - name: "Load Schema"
       mysql_db:
         name: "mysql"
