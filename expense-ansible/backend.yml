@@ -57,6 +57,18 @@
          name: "mysql"
          state: latest
 
+    - name: Load Schema"
+      mysql_db:
+        name: "mysql"
+        login_user: root
+        login_password: ExpenseApp@1
+        login_host: mysql-dev.pdevops72.online
+        state: import
+        target: /app/schema/backend.sql
+
+
+
+
 
 
 
