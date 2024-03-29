@@ -57,7 +57,7 @@
          name: "mysql"
          state: latest
 
-    - name: Load Schema"
+    - name: "Load Schema"
       mysql_db:
         name: "mysql"
         login_user: root
