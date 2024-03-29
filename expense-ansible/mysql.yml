@@ -17,8 +17,9 @@
         name: "mysqld"
         enabled: true
 
-    - name: "hello"
-      ansible.builtin.debug:
-        msg: "hai"
+    - name: "mysecure installation"
+      mysql_secure_installtion:
+        user: root
+        login_password: ExpenseApp@1
 
 
