@@ -1,0 +1,8 @@
+- name: "Install mysql server"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Installing mysql server"
+      ansible.builtin.dnf:
+        name: "mysql server"
+        state: latest
