@@ -17,7 +17,7 @@
         name: "mysqld"
         enabled: true
 
-    - name: "mysql_secure_installation"
+   - name: "mysql_secure_installation"
 #      mysql_secure_installation:
 #         user: root
 #         login_password: ExpenseApp@1
