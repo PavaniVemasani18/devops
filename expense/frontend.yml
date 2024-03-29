@@ -7,10 +7,10 @@
         name: nginx
         state: latest
 
-#    - name: start nginx service
-#      ansible.builtin.systemd_service:
-#        name: nginx
-#        state: started
+    - name: start nginx service
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: started
 
     - name: Copy expense conf file
       ansible.builtin.copy:
