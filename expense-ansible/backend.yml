@@ -52,15 +52,12 @@
       ansible.builtin.systemd_service:
         daemon_reload: true
 
-    - name: "Enable service"
-      ansible.builtin.service:
-        name: "nodejs"
-        enabled: yes
+    - name: "Install mysql"
+      ansible.builtin.dnf:
+         name: "mysql"
+         state: latest
 
-    - name: "Enable service"
-      ansible.builtin.service:
-        name: "nodejs"
-        state: started
+
 
 
 
