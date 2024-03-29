@@ -12,11 +12,6 @@
         name: "nginx"
         state: started
 
-    - name: Copy expense conf file
-      ansible.builtin.copy:
-        src: expense.conf
-        dest: /etc/nginx/default.d/expense.conf
-
     - name: "clean the code"
       ansible.builtin.file:
         path: /usr/share/nginx/html
@@ -37,6 +32,11 @@
         src: /tmp/frontend.zip
         dest: /usr/share/nginx/html
         remote_src: yes
+
+    - name: Copy expense conf file
+      ansible.builtin.copy:
+        src: frontend.conf
+        dest: /etc/nginx/default.d/expense.conf
 
     - name: Restart configuration service
       ansible.builtin.service:
