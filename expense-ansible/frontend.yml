@@ -2,7 +2,7 @@
   hosts: frontend-dev.pdevops72.online
   become: yes
   tasks:
-    - name: "statrt nginx installation"
+    - name: "start nginx installation"
       ansible.builtin.dnf:
         name: "nginx"
         state: latest
