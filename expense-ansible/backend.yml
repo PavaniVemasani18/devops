@@ -8,7 +8,7 @@
         state: absent
 
     - name: enable nodejs
-      ansible.builtin.package: dnf module enable nodejs:20 -y
+      ansible.builtin.shell: dnf module enable nodejs:20 -y
 
     - name: Install nodejs
       ansible.builtin.dnf:
