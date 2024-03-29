@@ -48,6 +48,11 @@
         path: npm install
         state: latest
 
+    - name: "Copy backend service"
+      ansible.builtin.copy:
+        src: backend.conf
+        dest: /etc/systemd/system/backend.service
+
     - name: "Load the service"
       ansible.builtin.systemd_service:
         daemon_reload: true
