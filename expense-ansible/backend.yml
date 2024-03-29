@@ -2,7 +2,15 @@
   hosts: backend-dev.pdevops72.online
   tasks:
     - name: "disable nodejs package"
+      ansible.builtin.shell: dnf module disable nodejs
+
+    - name: "enable nodejs package"
+      ansible.builtin.shell: dnf module enable nodejs:20
+
+    - name: "Install nodejs"
       ansible.builtin.dnf:
-       state: disabled
+        name: "nodejs"
+        state: Installed
+
 
 
