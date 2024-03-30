@@ -1,5 +1,5 @@
 dependencies:
-  - role: backend
+  - role: frontend
 - name: start nginx installation
   ansible.builtin.dnf:
     name: nginx
