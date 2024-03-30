@@ -13,7 +13,6 @@
         state: started
 
 
-
     - name: clean the code
       ansible.builtin.file:
         path: /usr/share/nginx/html
