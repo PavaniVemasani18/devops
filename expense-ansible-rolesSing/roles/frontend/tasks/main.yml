@@ -1,0 +1,37 @@
+- name: start nginx installation
+  ansible.builtin.dnf:
+    name: nginx
+    state: latest
+
+- name: start nginx service
+  ansible.builtin.systemd_service:
+    name: nginx
+    state: started
+#below copy code wont work when dynamically pass the value through CLI so here we can use template module
+#- name: Copy expense conf file
+#  ansible.builtin.copy:
+#    src: frontend.conf
+#    dest: /etc/nginx/default.d/expense.conf
+
+- name: template expense conf file
+  ansible.builtin.template:
+    src: roles/frontend/file/frontend.conf
+    dest: /etc/nginx/default.d/expense.conf
+
+- name: Run common code
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: pre-req
+#clean a code
+
+#create a directory
+
+#download
+
+#unarchive
+
+- name: Restart configuration service
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: yes
