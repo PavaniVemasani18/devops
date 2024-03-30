@@ -15,9 +15,9 @@
 
 - name: template expense conf file
   ansible.builtin.template:
-    src: frontend.conf
+    src: roles/frontend/file/frontend.conf
     dest: /etc/nginx/default.d/expense.conf
-    remote_src: yes
+
 
 - name: clean the code
   ansible.builtin.file:
