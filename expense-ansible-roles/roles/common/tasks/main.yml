@@ -1,2 +1,2 @@
 - name: set prompt for the component
-  ansible.builtin.shell: sudo set-prompt {{ component }}
+  ansible.builtin.shell: sudo set-prompt component
