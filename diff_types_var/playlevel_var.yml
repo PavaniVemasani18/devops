@@ -1,0 +1,7 @@
+- name: Play Level Variable
+  hosts: localhost
+  vars: message
+  tasks:
+    - name: display msg
+      ansible.builtin.debug:
+        msg: message--{{ message }}
