@@ -1,7 +1,8 @@
 - name: Play Level Variable
   hosts: localhost
-  vars: message
+  vars:
+   password: hello
   tasks:
     - name: display msg
       ansible.builtin.debug:
-        msg: message--{{ message }}
+        msg: password--{{ password }}
