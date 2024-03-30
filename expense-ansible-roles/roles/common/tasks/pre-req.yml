@@ -1,13 +1,13 @@
 # common code for all roles(DRY Code)
-#- name: clean the code
-#  ansible.builtin.file:
-#    path: {{app_dir}}
-#    state: absent
-#
-#- name: Create a directory
-#  ansible.builtin.file:
-#    path: {{ app_dir }}
-#    state: directory
+- name: clean the code
+  ansible.builtin.file:
+    path: {{app_dir}}
+    state: absent
+
+- name: Create a directory
+  ansible.builtin.file:
+    path: {{ app_dir }}
+    state: directory
 
 - name: Download frontend url
   ansible.builtin.get_url:
@@ -17,5 +17,5 @@
 - name: unarchive frontend zip file
   ansible.builtin.unarchive:
     src: /tmp/{{ component }}.zip
-    dest: {{ app_dir }}
+    dest: {{app_dir}}
     remote_src: yes
