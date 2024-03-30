@@ -1,7 +1,7 @@
 # common code for all roles(DRY Code)
 - name: clean the code
   ansible.builtin.file:
-    path: {{ app_dir }}
+    path: {{app_dir}}
     state: absent
 
 - name: Create a directory
