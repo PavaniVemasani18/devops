@@ -18,21 +18,16 @@
     src: roles/backend/file/backend.conf
     dest: /etc/systemd/system/{{ component }}.service
 
-#clean a code
-
-#create a directory
-#download
-
-
-#unarchive
+- name: Run common code
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: pre-req
 
 - name: Install npm dependencies
   community.general.npm:
     name: npm
     path: npm install
     state: latest
-
-
 
 - name: Load the service
   ansible.builtin.systemd_service:
