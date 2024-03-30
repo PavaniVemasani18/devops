@@ -16,7 +16,7 @@
 - name: Copy backend service
   ansible.builtin.copy:
     src: backend.conf
-    dest: /etc/systemd/system/backend.service
+    dest: /etc/systemd/system/{{ component }}.service
 
 - name: clean the code
   ansible.builtin.file:
@@ -30,12 +30,12 @@
 
 - name: Download backend zip
   ansible.builtin.get_url:
-    url: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
-    dest: /tmp/backend.zip
+    url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
+    dest: /tmp/{{ component }}.zip
 
 - name: unarchive backend zip
   ansible.builtin.unarchive:
-    src: /tmp/backend.zip
+    src: /tmp/{{ component }}.zip
     dest: /app
     remote_src: yes
 
