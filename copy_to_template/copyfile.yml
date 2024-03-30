@@ -7,6 +7,6 @@
         dest: /tmp/example-copy.conf
 
     - name: copy file from src to dest (templates)
-      ansible.builtin.templates:
+      ansible.builtin.template:
         src: example.conf
         dest: /tmp/example-template.conf
