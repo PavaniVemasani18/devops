@@ -3,4 +3,4 @@
   roles:
     - demo
   vars:
-   msg: {{ message }}
+   msg: abc

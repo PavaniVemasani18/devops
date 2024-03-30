@@ -1,1 +1,1 @@
-message: hai
+message: {{ msg }}
