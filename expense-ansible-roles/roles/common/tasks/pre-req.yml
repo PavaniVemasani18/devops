@@ -3,10 +3,12 @@
   ansible.builtin.file:
     path: {{ app_dir }}
     state: absent
+
 - name: Create a directory
   ansible.builtin.file:
     path: {{ app_dir }}
     state: directory
+
 - name: Download frontend url
   ansible.builtin.get_url:
     url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
