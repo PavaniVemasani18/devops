@@ -1,0 +1,20 @@
+- name: frontend
+  hosts: all
+  become: yes
+  tasks:
+    - name: start nginx installation
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
+
+    - name: start nginx service
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: started
+
+
+    - name: clean the code
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: absent
+
