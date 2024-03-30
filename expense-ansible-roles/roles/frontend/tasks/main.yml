@@ -1,5 +1,5 @@
 dependencies:
-  - role: frontend
+  - role: frontend/meta/main.yml
 - name: start nginx installation
   ansible.builtin.dnf:
     name: nginx
