@@ -1,0 +1,4 @@
+- name: copy file
+  hosts: localhost
+  roles:
+   - copyf
