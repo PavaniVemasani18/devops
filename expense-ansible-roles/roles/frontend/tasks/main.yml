@@ -18,26 +18,16 @@
     src: roles/frontend/file/frontend.conf
     dest: /etc/nginx/default.d/expense.conf
 
-- name: clean the code
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
+- name: Run common code
+  ansible.builtin.import_role:
+    name: common
+#clean a code
 
-- name: Create a directory
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: directory
+#create a directory
 
-- name: Download frontend url
-  ansible.builtin.get_url:
-    url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
-    dest: /tmp/{{ component }}.zip
+#download
 
-- name: Extract frontend zip file
-  ansible.builtin.unarchive:
-    src: /tmp/{{ component }}.zip
-    dest: /usr/share/nginx/html
-    remote_src: yes
+#unarchive
 
 - name: Restart configuration service
   ansible.builtin.service:

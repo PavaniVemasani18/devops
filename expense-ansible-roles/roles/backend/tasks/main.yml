@@ -18,26 +18,13 @@
     src: roles/backend/file/backend.conf
     dest: /etc/systemd/system/{{ component }}.service
 
-- name: clean the code
-  ansible.builtin.file:
-    path: /app
-    state: absent
+#clean a code
 
-- name: Make a directory
-  ansible.builtin.file:
-    path: /app
-    state: directory
+#create a directory
+#download
 
-- name: Download backend zip
-  ansible.builtin.get_url:
-    url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
-    dest: /tmp/{{ component }}.zip
 
-- name: unarchive backend zip
-  ansible.builtin.unarchive:
-    src: /tmp/{{ component }}.zip
-    dest: /app
-    remote_src: yes
+#unarchive
 
 - name: Install npm dependencies
   community.general.npm:
