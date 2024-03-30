@@ -5,6 +5,6 @@
 
  - name: copy file from src to dest (templates)
    ansible.builtin.template:
-     src: example.conf
+     src: roles/copyf/files/example.conf
      dest: /tmp/example-template.conf
 
