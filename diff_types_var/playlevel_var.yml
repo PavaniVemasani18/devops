@@ -6,3 +6,7 @@
     - name: display msg
       ansible.builtin.debug:
         msg: password--{{ password }}
+
+    - name: playlevel variable can use in tasks level
+      ansible.builtin.debug:
+        msg: password--{{ password }}
