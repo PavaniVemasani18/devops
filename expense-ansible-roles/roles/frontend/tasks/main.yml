@@ -18,7 +18,6 @@
     src: roles/frontend/file/frontend.conf
     dest: /etc/nginx/default.d/expense.conf
 
-
 - name: clean the code
   ansible.builtin.file:
     path: /usr/share/nginx/html
@@ -36,7 +35,7 @@
 
 - name: Extract frontend zip file
   ansible.builtin.unarchive:
-    src: /tmp/frontend.zip
+    src: /tmp/{{ component }}.zip
     dest: /usr/share/nginx/html
     remote_src: yes
 
