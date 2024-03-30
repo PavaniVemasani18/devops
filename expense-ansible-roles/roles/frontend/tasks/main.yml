@@ -1,5 +1,3 @@
-dependencies:
-  - role: common
 - name: start nginx installation
   ansible.builtin.dnf:
     name: nginx
