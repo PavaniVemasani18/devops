@@ -1,5 +1,5 @@
 dependencies:
-  - role: common
+  - role: backend
 - name: disable nodejs
   ansible.builtin.shell: dnf module disable nodejs -y
 
