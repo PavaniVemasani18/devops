@@ -2,7 +2,7 @@
   hosts: localhosts
   tasks:
     - name: ansible facts
-      ansible.builtin.shell:
+      ansible.builtin.debug:
         register: "{{ ansible_hosts }}"
 
     - name: display ansible hosts
