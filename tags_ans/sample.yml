@@ -1,0 +1,12 @@
+- name: tags
+  hosts: localhost
+  tasks:
+    - name: print
+      tags: ntp
+      ansible.builtin.debug:
+        msg: "{{ ntp }}"
+
+   - name: print1
+     ansible.builtin.debug:
+       msg: "hello"
+
