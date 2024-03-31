@@ -1,12 +1,9 @@
 - name: conditions
   hosts: localhosts
   vars:
-     password: pass
+     pass: abc
   tasks:
-    - name: ansible facts
+    - name: print based on condition
       ansible.builtin.debug:
-        register: pass
-
-
-
-
+        msg: {{pass}}
+      when: pass == abc
