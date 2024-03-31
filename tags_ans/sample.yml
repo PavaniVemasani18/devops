@@ -1,5 +1,6 @@
 - name: tags
   hosts: localhost
+  become: yes
   tags: nginx
   tasks:
     - name: Install nginx
