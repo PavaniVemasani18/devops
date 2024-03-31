@@ -19,7 +19,7 @@
     login_password: ExpenseApp@1
     login_host: mysql-dev.pdevops72.online
     filter: version
- register: mysql_secure_connection
+  register: mysql_secure_connection
 
 
 - name: Root password
