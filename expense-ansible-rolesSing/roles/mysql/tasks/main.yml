@@ -38,6 +38,7 @@
 
 - name: Root password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
+  when: mysql_secure_connection.changed is true
 
 
 
