@@ -8,6 +8,6 @@
     - name: conditions
       ansible.builtin.debug:
         msg: fruits
-        when: type is false
+        when: type is true
 
 
