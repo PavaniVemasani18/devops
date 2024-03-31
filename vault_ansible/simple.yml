@@ -1,7 +1,7 @@
 - name: vault in ansible
   hosts: all
   vars:
-    pass: !vault |
+    text: !vault |
                     $ANSIBLE_VAULT;1.1;AES256
                     39656533333931613337323964363138303439316331303662396433626432306561636133663561
                     6336373564623766626431353635656631306636643164320a656234633231333766316163656236
@@ -12,4 +12,4 @@
   tasks:
     - name: password encrypt
       ansible.builtin.debug:
-        msg: "{{ pass }}"
+        msg: "{{ text }}"
