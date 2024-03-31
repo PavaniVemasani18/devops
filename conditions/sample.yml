@@ -4,11 +4,12 @@
     - name: conditions
       ansible.builtin.debug:
          msg: vegetables
+      when: type is false
 
     - name: conditions
       ansible.builtin.debug:
         msg: fruits
-      when: type is false
+
 
 
 
