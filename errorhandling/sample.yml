@@ -1,0 +1,7 @@
+- name: error handling
+  hosts: localhost
+  tasks:
+    - name: ignore errors
+      ansible.builtin.copy:
+        src: demo.yml
+        dest: demo1.yml
