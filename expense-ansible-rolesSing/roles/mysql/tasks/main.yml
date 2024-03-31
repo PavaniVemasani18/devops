@@ -13,6 +13,16 @@
     name: mysqld
     enabled: true
 
+- name: Install PyMySQL package
+  ansible.builtin.pip:
+    name: PyMySQL
+    state: latest
+
+- name: Install cryptography package
+  ansible.builtin.pip:
+    name: cryptography
+    state: latest
+
 - name: check DB connection with password
   community.mysql.mysql_info:
     login_user: root
