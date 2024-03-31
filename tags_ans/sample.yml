@@ -1,9 +1,9 @@
 - name: tags
   hosts: localhost
   become: yes
-  tags: nginx
   tasks:
     - name: Install nginx
+      tags: nginx
       ansible.builtin.dnf:
         name: nginx
         state: latest
