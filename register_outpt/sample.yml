@@ -1,0 +1,10 @@
+- name: store output in register keyword
+  hosts: localhosts
+  tasks:
+    - name: store output
+      ansible.builtin.shell: uptime
+      register: result
+
+    - name: display uptime
+      ansible.builtin.debug:
+        msg: "{{ result }}"
