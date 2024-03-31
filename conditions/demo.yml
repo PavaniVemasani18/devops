@@ -3,7 +3,7 @@
   tasks:
     - name: ansible facts
       ansible.builtin.gather_facts:
-        register: "{{ ansible_hosts "}}"
+        register: "{{ ansible_hosts }}"
 
     - name: display ansible hosts
       ansible.builtin.debug:
