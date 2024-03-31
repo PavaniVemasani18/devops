@@ -1,12 +1,19 @@
 - name: tags
   hosts: localhost
+  tags: nginx
   tasks:
-    - name: print
-      tags: ntp
-      ansible.builtin.debug:
-        msg: "{{ ntp }}"
+    - name: Install nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
+    - name: display uptime
+      ansible.builtin.shell: uptime
+      register: output
 
-   - name: print1
-     ansible.builtin.debug:
-       msg: "hello"
+    - name: display uptime
+      ansible.builtin.debug:
+        msg: "{{output}}"
+
+
+
 
