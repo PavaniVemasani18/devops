@@ -5,5 +5,5 @@
   tasks:
     - name: print based on condition
       ansible.builtin.debug:
-        msg: {{pass}}
+        msg: "{{ pass }}"
       when: pass == abc
