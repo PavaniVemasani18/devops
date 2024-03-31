@@ -1,0 +1,2 @@
+- name: data collected from remote hosts
+  ansible.builtin.set_fact: {{ansible_hostname}}
