@@ -7,4 +7,4 @@
 
     - name: display uptime
       ansible.builtin.debug:
-        msg: {{ result.start }}
+        msg: "{{ result.start }}"
