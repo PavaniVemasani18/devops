@@ -1,0 +1,16 @@
+to encrypt a string
+===================
+ansible-vault encrypt_string hello(some string)
+
+to run the playbook use the below cmd
+=====================================
+ansible-playbook simple.yml --ask-vault-pass
+
+to encrtypt the file
+====================
+ansible-vault encrypt simple.yml
+
+to decrypt the file
+===================
+ansible-vault decrypt simple.yml
+
