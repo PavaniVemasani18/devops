@@ -1,5 +1,5 @@
 - name: vault in ansible
-  hosts: all
+  hosts: localhost
   vars:
     text: !vault |
                     $ANSIBLE_VAULT;1.1;AES256
