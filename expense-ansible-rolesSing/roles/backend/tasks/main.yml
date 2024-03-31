@@ -61,6 +61,14 @@
   ansible.builtin.debug:
     msg: "{{ schema_output }}"
 
+- name: backend schema
+  ansible.builtin.shell: /app/schema/backend.sql
+  register: backend_schema
+
+- name: display backend schema output
+  ansible.builtin.debug:
+    msg: "{{ backend_schema }}"
+
 - name: Enabled backend service
   ansible.builtin.service:
     name: backend
