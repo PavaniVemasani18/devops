@@ -12,9 +12,13 @@
   ansible.builtin.systemd_service:
     name: mysqld
     enabled: true
+ - name: mysecure installation
+   ansible.builtin.debug: mysql_secure_installation
+     register: mysql_secure
 
 - name: Root password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
+
 
 
 
