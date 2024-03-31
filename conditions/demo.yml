@@ -1,5 +1,5 @@
 - name: conditions
-  hosts: localhosts
+  hosts: localhost
   vars:
      password: abc
   tasks:
