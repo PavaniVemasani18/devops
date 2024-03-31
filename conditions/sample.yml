@@ -1,6 +1,6 @@
 - name: based on conditions
   hosts: localhost
-  task:
+  tasks:
     - name: conditions
       ansible.builtin.debug:
          msg: vegetables
