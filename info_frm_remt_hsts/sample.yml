@@ -1,5 +1,5 @@
 - name: collected info from remote hosts
-  hosts: localhost
+  hosts: all
   tasks:
     - name: data collected from remote hosts
       ansible.builtin.debug:
