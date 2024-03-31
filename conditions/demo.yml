@@ -1,12 +1,12 @@
 - name: conditions
   hosts: localhosts
+  vars:
+     password: pass
   tasks:
     - name: ansible facts
-      ansible.builtin.shell: ansible_hosts
-        register: res_hosts
-
-    - name: display ansible hosts
       ansible.builtin.debug:
-        msg: "{{ res_hosts }}"
+        register: pass
+
+
 
 
