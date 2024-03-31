@@ -6,4 +6,4 @@
     - name: print based on condition
       ansible.builtin.debug:
         msg: "{{ password }}"
-      when: password == abc
+      when: password == "abc"
