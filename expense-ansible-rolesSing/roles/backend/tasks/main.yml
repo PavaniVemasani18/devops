@@ -55,7 +55,11 @@
     login_user: root
     login_password: ExpenseApp@1
     login_host: mysql-dev.pdevops72.online
+  register: schema_output
 
+- name: display schema output
+  ansible.builtin.debug:
+    msg: "{{ schema_output }}"
 
 - name: Enabled backend service
   ansible.builtin.service:
