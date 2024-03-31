@@ -1,5 +1,5 @@
 - name: store output in register keyword
-  hosts: all
+  hosts: localhosts
   tasks:
     - name: store output
       ansible.builtin.shell: uptime
