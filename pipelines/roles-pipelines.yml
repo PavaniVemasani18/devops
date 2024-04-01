@@ -25,6 +25,6 @@ pipelines:
             tasks:
             - exec:
                 arguments:
-                - sample.yml
+                - expense.yml
                 command: ansible-playbook
                 run_if: passed
