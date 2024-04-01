@@ -8,7 +8,7 @@ if any changes in the current resource,then terraform will destroy the resource 
 
 so to overcome the above last step decouple provisioner
 
-1.if provisioner fails ,instance wont create.
+1.if provisioner fails ,instance wont recreate.
 now null_Resource will come into the picture
 resource "null_resource" "test" {
 provisioner "remote-exec" {
