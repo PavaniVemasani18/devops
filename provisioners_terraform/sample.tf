@@ -11,8 +11,8 @@ resource "aws_instance" "page" {
       host     = self.public_ip
     }
     inline = [
-      "sudo dnf install nginx",
-      "sudo systemctl start nginx"
+      "dnf install nginx",
+      "systemctl start nginx"
     ]
   }
 
