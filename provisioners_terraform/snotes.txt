@@ -3,3 +3,4 @@ provisioner :
 a new  instance created in remote hosts, install packages dynamically in current instance
 to run the same provisioner,first instance destroyed and recreate the same instance,this is terraform behaviour
 it won't create another resource.
+if any changes in the current resource,then terraform will destroy the resource first and then recreate the same resource.
