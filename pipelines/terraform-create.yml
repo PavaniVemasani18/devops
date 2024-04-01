@@ -25,6 +25,6 @@ terraform-create:
             tasks:
             - exec:
                 arguments:
-                - sample.yml
+                - provisioners_terraform/sample.tf
                 command: terraform
                 run_if: passed
