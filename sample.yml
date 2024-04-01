@@ -1,6 +1,8 @@
 - name: display message
   hosts: localhost
+  vars:
+    env: dev
   tasks:
     - name: print message
       ansible.builtin.debug:
-        msg: "hello"
+        msg: "environment -- ${env}"
