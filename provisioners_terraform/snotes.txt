@@ -26,3 +26,4 @@ provisioner "remote-exec" {
 
 }
 code changes in provisoner,terraform will execute only the changed part not all
+Provisioner executes again and again instead of creating of recreating a resource
