@@ -25,3 +25,4 @@ provisioner "remote-exec" {
 }
 
 }
+code changes in provisoner,terraform will execute only the changed part not all
