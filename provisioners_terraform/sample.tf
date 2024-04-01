@@ -5,7 +5,6 @@ resource "aws_instance" "page" {
   tags = {
     Name= "page"
   }
-
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
