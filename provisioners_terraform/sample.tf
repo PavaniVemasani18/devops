@@ -17,7 +17,7 @@ provisioner "remote-exec" {
   }
   inline = [
     "dnf install nginx -y",
-    "sudo systemctl start nginx"
+    "systemctl start nginx"
   ]
 }
 
