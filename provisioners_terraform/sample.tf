@@ -16,7 +16,7 @@ provisioner "remote-exec" {
     host     = aws_instance.page.public_ip
   }
   inline = [
-    "sudo dnf install nginx -y",
+    "dnf install nginx -y",
     "sudo systemctl start nginx"
   ]
 }
