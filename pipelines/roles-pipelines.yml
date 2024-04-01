@@ -10,7 +10,7 @@ materials:
     git: https://github.com/PavaniVemasani18/devops.git
     shallow_clone: false
     auto_update: true
-    branch: master
+    branch: main
 
 stages:
 - test-stage:
