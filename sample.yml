@@ -5,4 +5,4 @@
   tasks:
     - name: print message
       ansible.builtin.debug:
-        msg: "environment -- ${env}"
+        msg: "environment ---- ${env}"
