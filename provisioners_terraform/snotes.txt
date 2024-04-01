@@ -1,5 +1,5 @@
 provisioner :
 =============
-a new  instance created , install packages dynamically in current instance , then we can use provisioner
+a new  instance created in remote hosts, install packages dynamically in current instance
 to run the same provisioner,first instance destroyed and recreate the same instance,this is terraform behaviour
-it won't create another resource
+it won't create another resource.

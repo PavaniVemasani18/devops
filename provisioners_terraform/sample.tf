@@ -2,6 +2,9 @@ resource "aws_instance" "page" {
   ami = "ami-05f020f5935e52dc4"
   instance_type = "t3.small"
   vpc_security_group_ids = [data.aws_security_group.security.id]
+  tags = {
+    Name= "page"
+  }
 
   provisioner "remote-exec" {
     connection {
@@ -11,7 +14,7 @@ resource "aws_instance" "page" {
       host     = self.public_ip
     }
     inline = [
-      "sudo dnf install nginx",
+      "sudo dnf install nginx -y",
       "sudo systemctl start nginx"
     ]
   }
