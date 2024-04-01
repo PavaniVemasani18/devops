@@ -1,4 +1,4 @@
-resource "aws_instance" "frontend" {
+resource "aws_instance" "page" {
   ami = "ami-036c2987dfef867fb"
   instance_type = "t3.small"
   vpc_security_group_ids = [data.aws_security_group.security.id]
@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
-      host     = aws_instance.frontend.public_ip
+      host     = self.public_ip
     }
     inline = [
       "sudo dnf install nginx",
