@@ -1,3 +1,3 @@
-variable "aws_ami"{}
-variable "aws_instanceType" {}
+variable "ami"{}
+variable "instance_type" {}
 variable "tools_name"{}
