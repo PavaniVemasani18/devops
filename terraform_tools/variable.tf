@@ -1,8 +1,8 @@
 variable "tools" {
   default = {
     promotheus = {
-      ami = var.ami
-      instance_type=var.instanceType
+      ami = "ami-05f020f5935e52dc4"
+      instance_type="t3.small"
     }
   }
 }
