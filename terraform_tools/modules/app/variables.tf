@@ -1,2 +1,2 @@
-//variable "aws_ami"{}
-//variable "aws_instanceType" {}
+variable "aws_ami"{}
+variable "aws_instanceType" {}
