@@ -6,16 +6,17 @@ variable "tools" {
     }
   }
 }
+
 variable "ami" {}
 variable "instanceType"{}
 
 
 output "ami" {
-  value = var.ami
+  value = var.tools.promotheus.ami
 
 }
 output "instance_type" {
-  value = var.instanceType
+  value = var.tools.promotheus.instance_type
 }
 
 // here key is a "promotheus" value is a instance_type
