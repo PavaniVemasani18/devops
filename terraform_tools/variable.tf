@@ -10,7 +10,7 @@ variable "tools" {
 variable "ami" {
   default = "ami-05f020f5935e52dc4"
 }
-variable "instanceType"{
+variable "instance_type"{
   instance_type="t3.small"
 }
 
