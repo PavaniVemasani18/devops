@@ -1,3 +1,3 @@
 bucket = "bknd-state-file"
-key    = "tools/dev/files"
+key    = "tools/files"
 region = "us-east-1"
