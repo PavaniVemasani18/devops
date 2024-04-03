@@ -6,9 +6,15 @@ variable "tools" {
     }
   }
 }
+resource "null_resource" "demo" {
+  for_each = var.tools
+  promt = each.key
+  ami = each.value
+  instance_type=each.value
 
+}
 variable "ami" {
-  default = "ami-05f020f5935e52dc4"
+ //  default = "ami-05f020f5935e52dc4"
 }
 variable "instance_type"{
   default="t3.small"
