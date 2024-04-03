@@ -20,13 +20,13 @@ resource "null_resource" "demo" {
 //  default="t3.small"
 //}
 
-output "ami" {
-  value = var.tools.promotheus.ami
-
-}
-output "instance_type" {
-  value = var.tools.promotheus.instance_type
-}
+//output "ami" {
+//  value = var.tools.promotheus.ami
+//
+//}
+//output "instance_type" {
+//  value = var.tools.promotheus.instance_type
+//}
 
 // here key is a "promotheus" value is a instance_type
 //load the values form main.tfvars
